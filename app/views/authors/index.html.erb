@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Authors</h1>
+
+<ul>
+<% @authors.each do |author| %>
+  </br>
+  <li>Username: <%= author.username  %></li>
+  <li>Email: <%= author.email  %></li>
+  </br>
+  <%= link_to 'Show', author %>
+  <%= link_to 'Edit', edit_author_path(author) %>
+  <%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+  </br>
+
+  <% end %>
+</ul>
+</br>
+<%= link_to 'New Author', new_author_path %>
+
